@@ -72,10 +72,11 @@ export function TitleUpdater() {
 }
 
 // Uppgift 6
+
 let ADD_ITEM = 'ADD_ITEM';
 let REMOVE_ITEM = 'REMOVE_ITEM';
 
-const reducer = (state, action) => {
+let reducer = (state, action) => {
     switch (action.type) {
         case ADD_ITEM:
             return [...state, action.payload];
@@ -104,7 +105,7 @@ export function ToDoList() {
     return (
         <>
             <h2>Att-göra lista</h2>
-            <input type="text" id="newItem" />
+            <input type="text" id="newItem"/>
             <button onClick={addItem}>Add item</button>
             <ul>
             {items.map((item, index) => (
@@ -113,9 +114,6 @@ export function ToDoList() {
                     </li>
                 ))}
             </ul>
-
-            <h3>useReducer vs. useState</h3>
-            <p>useReduce är onödigt komplicerad för en så enkel sak som en "att gör"-lista. Säkert bra till mer komplexa grejer.</p>
         </>
     )
 }
