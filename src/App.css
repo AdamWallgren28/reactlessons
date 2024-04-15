@@ -10,12 +10,14 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    height: 20vh;
+    margin-top: 5vh;
   }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +28,30 @@
 
 .App-link {
   color: #61dafb;
+
 }
+
+.lek5b {
+  width: 50vw;
+}
+
+.myForm {
+  border-style: solid;
+  width: 50vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+  .inputDiv, label{
+    padding: 1rem;
+  }
+
+  button {margin: 1rem;}
+
+
+
+
 
 @keyframes App-logo-spin {
   from {
