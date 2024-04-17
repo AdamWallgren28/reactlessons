@@ -1,26 +1,31 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
+
+// Uppgift 1
 
 export let DynamicTitleEditor = () => {
-    let [title, setTitle] = useState('');
+    let [title, setTitle] = useState('Set new title below');
 
-    let handleTitleChange = (event) => {
-        let newTitle = event.target.value;
+    let handleTitleChange = (e) => {
+        let newTitle = e.target.value;
         setTitle(newTitle === '' ? "Set new title below" : newTitle);
     };
 
     return (
-        <div>
-            <h1>{title}</h1>
-        <input 
-            type="text" 
-            onChange={handleTitleChange} 
-            placeholder="Enter title" 
-        />        
+        <div class="lektionsUppgift">
+            <p><em>Uppgift 1</em></p>
+            <h2>{title}</h2>
+            <input 
+                type="text" 
+                onChange={handleTitleChange} 
+                placeholder="Enter title" 
+            />        
         </div>
     );
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Uppgift 2
 
 export let InteractiveList = () => {
     let items = [
@@ -40,22 +45,26 @@ export let InteractiveList = () => {
     }
 
       return (
-        <>            
-            <ul className="lek5b" >
-                {items.map((item, index) => (
-                    <li key={index}>                    
-                        {item.name}
-                        <button onClick={() => handleItemClick(index)}>Show description</button>                       
-                        {selectedItem.includes(index) && <p>{item.description}</p>}
-                    </li>
-                ))}
-            </ul>
-           
-        </>
+        <div class="lektionsUppgift">            
+            <p><em>Uppgift 2</em></p>
+            <div class="hockeyLista">
+                <ul>
+                    {items.map((item, index) => (
+                        <li key={index}>                    
+                            {item.name}
+                            <button onClick={() => handleItemClick(index)}>Show description</button><br />                      
+                            {selectedItem.includes(index) && <p>{item.description}</p>}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
       )
   };
 
   //////////////////////////////////////////////////////////////////////////////////////////
+
+  // Uppgift 3
 
   export let MultiFieldForm = () => {
     let [name, setName] = useState('');
@@ -74,35 +83,44 @@ export let InteractiveList = () => {
     };
 
     return (
-        <form className="myForm" onSubmit={handleSubmit}>
-            <div className="inputDiv">
-            <label>Name:</label>
-            <input
-                type="text"
-                name="name"
-                value={name}
-                onChange= {(e) => setName(e.target.value)}
-            />
-            </div>
-            <div className="inputDiv">
-            <label>Email:</label>
-            <input
-                type="email"
-                name="email"
-                value={email}
-                onChange= {(e) => setEmail (e.target.value)}
-            />
-            </div>
-            <div className="inputDiv">
-            <label>Message:</label>
-            <textarea        
-                name="message"
-                value={message}
-                onChange= {(e) => setMessage (e.target.value)}
-            />
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+        <div class="lektionsUppgift">
+            <p><em>Uppgift 3</em></p>
+            <form className="myForm" onSubmit={handleSubmit}>
+                <div className="inputDiv">
+                    <div class="labelDiv">
+                        <label>Name:</label>
+                    </div>
+                    <input
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange= {(e) => setName(e.target.value)}
+                    />
+                </div>
+                <div className="inputDiv">
+                    <div class="labelDiv">
+                        <label>Email:</label>
+                    </div>
+                    <input
+                        type="email"
+                        name="email"
+                        value={email}
+                        onChange= {(e) => setEmail (e.target.value)}
+                    />
+                </div>
+                <div className="inputDiv">
+                    <div class="labelDiv">
+                        <label>Message:</label>
+                    </div>
+                    <textarea        
+                        name="message"
+                        value={message}
+                        onChange= {(e) => setMessage (e.target.value)}
+                    />
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     )
   }
 
