@@ -9,7 +9,13 @@ import './App.css';
 // import { TraditionalGreeting, ArrowGreeting, UserProfile4, Card, Counter2, TitleUpdater, ToDoList } from './components/lektion4';
 
 // Lektion 5
-import { DynamicTitleEditor, InteractiveList, MultiFieldForm } from './components/lektion5';
+//import { DynamicTitleEditor, InteractiveList, MultiFieldForm } from './components/lektion5';
+
+// Lektion 6
+// import { ToggleButton, NavigationMenu, MUIForm } from './components/lektion6';
+
+// Lektion 7
+import { CustomCounter, MyForm } from './components/lektion7';
 
 
 
@@ -50,12 +56,26 @@ function App() {
         <hr/>
       </div>*/}
 
-      {/* {Lektion 5} */}
+      {/* {Lektion 5} 
       <div>
         <DynamicTitleEditor />
         <InteractiveList />
         <MultiFieldForm />
+      </div>*/}
+
+      {/* {Lektion6} 
+      <div>
+        <ToggleButton />
+        <NavigationMenu />
+        <MUIForm />
+      </div>*/}
+
+      {/* {Lektion7} */}
+      <div>
+        <CustomCounter />
+        <MyForm />
       </div>
+
 
     </div>
   );
